@@ -33,7 +33,7 @@ def Clear():
 #   title - string
 def PageTitle(title: str):
     # Decorator holder
-    decorator: str = "****************************************";
+    decorator: str = "****************************************"
     # Title length
     titleLength: int = len(title)
     # Length difference between decorator's length and title's length
@@ -41,7 +41,7 @@ def PageTitle(title: str):
     index: int = 1
     text: str = ""
     
-    print(decorator);
+    print(decorator)
     
     while index <= diffLength:
         if (int(diffLength / 2) != index):
@@ -80,7 +80,6 @@ def DisplayTableRecord(item: dict, withIndex: bool):
     decorator: str = "****************************************"
     decoratorLength: int = len(decorator)
     midIndex: int = int(decoratorLength / 2)
-    diffIndex: int = decoratorLength - midIndex
     record: str = ""
     i: int = 0
     
@@ -175,14 +174,8 @@ def ProcessSearchCriteria():
                     text = GetUserInput("Search sold item by price: ")
                     GetItems(text, True, 2)
                     
-                text: str = GetUserInput("Write: \"Reset\" to reset the operation.\nYou can also go to the main menu by pressing Enter")
-        
-                if text == "Reset":
-                    MenuChoiceSelector(MenuChoices[2])
-                elif text == "":
-                    MenuChoiceSelector(MenuChoices[0])
-                else:
-                    SaveItemState()
+                text: str = GetUserInput("Press Enter to return to Main Menu")
+                MenuChoiceSelector(MenuChoices[0])
             else:
                 MenuChoiceSelector(MenuChoices[2])
         except:
@@ -241,7 +234,7 @@ def MainMenu():
     #Display Main Menu with generic menu builder
     Clear()
     DisplayMenu(title, menuItems)
-    print("");
+    print("")
     GetItems("", False, 1)
     ProcessMenuChoice(title, menuItems)
 
@@ -279,7 +272,7 @@ def SearchItemMenu():
     #Display Main Menu with generic menu builder
     Clear()
     DisplayMenu(title, menuItems)
-    ProcessSearchCriteria();
+    ProcessSearchCriteria()
 
 # Name: PurchaseItemMenu
 # Description: Purchase Menu Builder
@@ -372,9 +365,9 @@ def ValidateItem(item: dict):
     try:
         str(item["Name"])
         float(item["Price"])
-        return True;
+        return True
     except:
-        return False;
+        return False
 
 # Name: SaveItemState
 # Description: Validate user action
@@ -382,13 +375,12 @@ def ValidateItem(item: dict):
 #   item - dictionary
 def SaveItemState(item: dict):
     # Validate user action
-    text: str = GetUserInput("Write:\"Agree\" to save item details or \"Cancel\" to cancel the operation.\nYou can also reset the operation by pressing Enter")
+    text: str = GetUserInput("Write:\"Agree\" to save item details or \"Cancel\" to cancel the operation.")
         
     if text == "Agree":
         # Validate Item
         if ValidateItem(item):
             Items.append(item)
-            ItemIndex += 1
             GetUserInput("Item Saved Successfully.")
             MenuChoiceSelector(MenuChoices[0])
         else:
@@ -397,10 +389,8 @@ def SaveItemState(item: dict):
             MenuChoiceSelector(MenuChoices[1])
     elif text == "Cancel":
         MenuChoiceSelector(MenuChoices[0])
-    elif text == "":
-        MenuChoiceSelector(MenuChoices[1])
     else:
-        SaveItemState()
+        SaveItemState(item)
 
 # Name: GetItems
 # Description: Display all Items or by criteria
@@ -431,7 +421,7 @@ def GetItems(text: str, isPrice: bool, sold: int = 0, withIndex: bool = False):
             elif sold == 0:
                 DisplayTableRecord(item, withIndex)
         except:
-            return False;
+            return False
 
 #Display Main Program 
 MenuChoiceSelector(MenuChoices[0])
