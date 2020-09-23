@@ -15,7 +15,7 @@ MenuChoices: list = ["MainMenu", "CreateItemMenu", "SearchItemMenu", "PurchaseIt
 
 # global variable
 
-# Items holds the list of items that should be avaible throughout the session
+# Items holds the list of items that should be available throughout the session
 Items: list = \
 [ \
     {"Id": 1, "Name": "Cup", "Price": "100.00", "Sold": False}, \
