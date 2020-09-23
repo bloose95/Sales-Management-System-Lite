@@ -425,7 +425,7 @@ def GetItems(text: str, isPrice: bool, sold: int = 0, withIndex: bool = False):
                 if text == "":
                     DisplayTableRecord(item, withIndex)
                 elif isPrice == False and text.lower() == item["Name"].lower():
-                    DisplayTableRecord(item)
+                    DisplayTableRecord(item, withIndex)
                 elif isPrice and float(text) == float(item["Price"]):
                     DisplayTableRecord(item, withIndex)
             elif sold == 0:
