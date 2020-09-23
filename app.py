@@ -3,7 +3,7 @@
 # Created Date: 09.21.2020
 # Modified Date: 09.24.2020
 # Developer: Jordan Min Kive
-# File: test.py
+# File: app.py
 
 # required os to enable clearing of terminal
 import os
