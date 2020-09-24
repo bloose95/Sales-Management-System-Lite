@@ -77,8 +77,8 @@ def DisplayTableHeader():
 	print("*      Name        *       Price       *")
 	print("****************************************")
 
-# Name: DisplayTableHeader
-# Description: Generate Item Table Header
+# Name: DisplaySummaryHeader
+# Description: Generate Summary Table Header
 def DisplaySummaryHeader():
 	print("****************************************")
 	print("*   No. of item    *   Total Amount    *")
