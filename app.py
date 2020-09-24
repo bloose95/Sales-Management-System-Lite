@@ -272,7 +272,7 @@ def MainMenu():
     # List of menu items
     menuItems: list = \
     [ \
-        {"Id": 1, "Name": "Input item", "Function": MenuChoices[1]}, \
+        {"Id": 1, "Name": "Create item", "Function": MenuChoices[1]}, \
         {"Id": 2, "Name": "Search item", "Function": MenuChoices[2]}, \
         {"Id": 3, "Name": "Purchase item", "Function": MenuChoices[3]}, \
         {"Id": 4, "Name": "Sales summary", "Function": MenuChoices[4]}, \
