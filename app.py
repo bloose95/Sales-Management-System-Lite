@@ -31,7 +31,6 @@ ItemIndex: int = 4
 def Clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-
 # Name: PageTitle
 # Description: Generic Title Constructor
 # Parameters:
