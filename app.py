@@ -399,6 +399,9 @@ def PurchasingMenu(selectedItem: dict = {}):
     # otherwise if user typed Cancel then bring him back to main menu
     elif text == "Cancel":
         MenuChoiceSelector(MenuChoices[0])
+    else:
+        Clear()
+        PurchasingMenu(selectedItem)
 
 # Name: PurchaseItemMenu
 # Description: Sales Menu Builder
