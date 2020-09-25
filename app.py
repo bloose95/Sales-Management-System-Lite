@@ -1,7 +1,7 @@
 # Program: Sales Management System Lite
 # Description: A small management system that I was asked to build as my first university assignment
 # Created Date: 09.21.2020
-# Modified Date: 09.24.2020
+# Modified Date: 09.25.2020
 # Developer: Jordan Min Kive
 # File: app.py
 
