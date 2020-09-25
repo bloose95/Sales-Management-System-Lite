@@ -81,7 +81,7 @@ def DisplayTableHeader():
 # Description: Generate Summary Table Header
 def DisplaySummaryHeader():
 	print("****************************************")
-	print("*   No. of item    *   Total Amount    *")
+	print("*   No. of item    *    Total Amount   *")
 	print("****************************************")
 
 # Name: DisplayTableRecord
@@ -130,9 +130,6 @@ def DisplayTableRecord(item: dict, withIndex: bool):
                 # if we are at the center of the field we print the field value
                 elif int(fieldLength / 2) == index:
                     record += item[field]
-                # if field length is not a multiple of 2 then we add a new space as we are 1 character short
-                elif fieldLength % 2 == 0:
-                    record += " "
                 # if all the conditions are not met then we print a new space
                 else:
                   record += " "
